@@ -8,17 +8,16 @@ namespace AdventOfCode2022.Day1
 {
     public class Day1Solver
     {
-        private string[] _calories;
+        public string[] Calories { get; set; }
 
         public Day1Solver(string path)
         {
-            _calories = File.ReadAllLines(path);
+            Calories = File.ReadAllLines(path);
 
         }
-
-        public Day1Solver(string[] array)
+        public Day1Solver()
         {
-            _calories = array;
+                
         }
 
         public int SolvePart1()
@@ -27,7 +26,7 @@ namespace AdventOfCode2022.Day1
             
             int actCalories = 0;
 
-            foreach (string calorieItem in _calories)
+            foreach (string calorieItem in Calories)
             {
                 if (calorieItem != "")
                 {
@@ -50,7 +49,7 @@ namespace AdventOfCode2022.Day1
             List<int> caloriesPerElf = new List<int>(); 
             int actCalories = 0;
 
-            foreach (string calorieItem in _calories)
+            foreach (string calorieItem in Calories)
             {
                 if (calorieItem != "")
                 {

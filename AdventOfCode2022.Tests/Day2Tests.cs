@@ -1,8 +1,13 @@
-using AdventOfCode2022.Day1;
+﻿using AdventOfCode2022.Day2;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AdventOfCode2022.Tests
 {
-    public class Day1Tests
+    public class Day2Tests
     {
         string[] testInput;
 
@@ -11,22 +16,22 @@ namespace AdventOfCode2022.Tests
         {
             testInput = new[]
             {
-                "1000", "2000", "3000", "", "4000", "", "5000", "6000", "", "7000", "8000", "9000", "", "10000"
+                "A Y", "B X", "C Z"
             };
 
-            
+
         }
 
         [Test]
         public void Part1_ReturnsCorrectResult()
         {
-            Day1Solver day1 = new Day1Solver()
+            Day2Solver day2 = new Day2Solver()
             {
-                Calories = testInput
+                Rounds = testInput
             };
 
-            int actual = day1.SolvePart1();
-            int expected = 24000;
+            int actual = day2.SolvePart1();
+            int expected = 15;
 
             Assert.That(actual, Is.EqualTo(expected));
         }
@@ -34,13 +39,13 @@ namespace AdventOfCode2022.Tests
         [Test]
         public void Part2_ReturnsCorrectResult()
         {
-            Day1Solver day1 = new Day1Solver()
+            Day2Solver day2 = new Day2Solver()
             {
-                Calories = testInput
+                Rounds = testInput
             };
 
-            int actual = day1.SolvePart2();
-            int expected = 45000;
+            int actual = day2.SolvePart2();
+            int expected = 12;
 
             Assert.That(actual, Is.EqualTo(expected));
         }

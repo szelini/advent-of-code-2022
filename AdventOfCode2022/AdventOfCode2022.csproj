@@ -9,10 +9,11 @@
 
   <ItemGroup>
     <None Remove="Day1\input.txt" />
+    <None Remove="Day2\day2_input.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Day1\input.txt">
+    <Content Include="Day2\day2_input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
